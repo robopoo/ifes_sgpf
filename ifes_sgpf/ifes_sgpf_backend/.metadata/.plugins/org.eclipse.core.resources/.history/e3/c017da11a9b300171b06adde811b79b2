@@ -1,0 +1,57 @@
+package com.ifes.sgpf.model;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name ="ANALISTA")
+public class Analista {
+
+
+	 @Id
+	 @Column(name="id")
+	 @GeneratedValue(strategy=GenerationType.IDENTITY)
+	 int id;
+
+
+
+	 @Column(name="nome")
+	 String nome;
+	 
+	 @Column(name="email")
+	 String email;
+	 
+	 
+	 @Column(name="telefone")
+	 String telefone;
+	 
+	 
+	 
+	 public Empresa() {
+	  super();
+	 }
+	 
+	 
+	 
+	 public Empresa(int i, String nomeFantasia, String razaoSocial, String cnpj) {
+		 
+	  super();
+	  this.id = i;
+	  this.nomeFantasia = nomeFantasia;
+	  this.razaoSocial=razaoSocial;
+	  this.cnpj=cnpj;
+	  
+	 }
+
+	
+	
+	
+	
+	
+	
+	
+}

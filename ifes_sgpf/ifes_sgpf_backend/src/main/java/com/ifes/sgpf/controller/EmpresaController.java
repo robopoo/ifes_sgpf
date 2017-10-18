@@ -1,6 +1,5 @@
 package com.ifes.sgpf.controller;
 
-
 import java.util.List;
  
 import com.ifes.sgpf.model.Empresa;
@@ -36,7 +35,8 @@ public class EmpresaController {
 	public Empresa getEmpresaById(@PathVariable int id) {
 		return empresaService.getEmpresa(id);
 	}
- 
+
+	
 	@RequestMapping(value = "/addEmpresa", method = RequestMethod.POST, headers = "Accept=application/json")
 	public String addEmpresa(@ModelAttribute("empresa") Empresa empresa) {
 		
@@ -52,16 +52,16 @@ public class EmpresaController {
 	}
  
 	@RequestMapping(value = "/updateEmpresa/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
-	public String updateCountry(@PathVariable("id") int id,Model model) {
+	public String updateEmpresa(@PathVariable("id") int id,Model model) {
 		
-		 model.addAttribute("country", this.empresaService.getEmpresa(id));
+		 model.addAttribute("empresa", this.empresaService.getEmpresa(id));
 		 
-	        model.addAttribute("listOfCountries", this.empresaService.getAllEmpresas());
-	        return "countryDetails";
+	        model.addAttribute("listOfEmpresas", this.empresaService.getAllEmpresas());
+	        return "empresaDetails";
 	}
  
 	@RequestMapping(value = "/deleteEmpresa/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
-	public String deleteCountry(@PathVariable("id") int id) {
+	public String deleteEmpresa(@PathVariable("id") int id) {
 		
 		empresaService.deleteEmpresa(id);
 		

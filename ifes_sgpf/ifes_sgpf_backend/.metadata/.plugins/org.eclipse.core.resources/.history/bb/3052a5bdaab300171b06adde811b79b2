@@ -1,0 +1,49 @@
+package com.ifes.sgpf.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import com.ifes.sgpf.dao.AnalistaDAO;
+import com.ifes.sgpf.model.Empresa;
+
+
+@Service("analistaService")
+public class AnalistaService {
+
+	
+
+	 @Autowired
+	 AnalistaDAO analistaDao;
+
+	 
+
+	 @Transactional
+	 public List getAllAnalistas() {
+		 
+	  return analistaDao.getAllAnalistas();
+	 }
+
+	 
+	 
+	 @Transactional
+	 public Analista getAnalista(int id) {
+		 
+	  return analistaDao.getAnalista(id);
+	 }
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	
+	
+}

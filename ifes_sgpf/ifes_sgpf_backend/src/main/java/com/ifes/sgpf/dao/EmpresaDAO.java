@@ -24,9 +24,10 @@ public class EmpresaDAO {
 	
 	
 	public List getAllEmpresas() {
+		
 		  Session session = this.sessionFactory.getCurrentSession();
-		  List countryList = session.createQuery("from Empresa").list();
-		  return countryList;
+		  List empresaList = session.createQuery("from EMPRESA").list();
+		  return empresaList;
 	}	
 	
 
@@ -34,7 +35,7 @@ public class EmpresaDAO {
 		Session session = this.sessionFactory.getCurrentSession();
 		Empresa empresa = (Empresa) session.load(Empresa.class, new Integer(id));
 		return empresa;
-	}	
+	}
 	
 	
 	public Empresa addEmpresa(Empresa empresa) {

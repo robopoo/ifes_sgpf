@@ -33,6 +33,7 @@
 		<beans:property name="annotatedClasses">
 			<beans:list>
 				<beans:value>com.ifes.sgpf.model.Empresa</beans:value>
+				<beans:value>com.ifes.sgpf.model.Analista</beans:value>
 			</beans:list>
 		</beans:property>
 		<beans:property name="hibernateProperties">

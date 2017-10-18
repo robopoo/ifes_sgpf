@@ -1,0 +1,19 @@
+package com.ifes.sgpf.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import com.ifes.sgpf.service.EmpresaService;
+
+
+@Controller
+public class AnalistaController {
+
+
+	@Autowired
+	AnalistaService analistaService;
+
+	
+	
+	
+}

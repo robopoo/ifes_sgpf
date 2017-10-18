@@ -1,0 +1,13 @@
+package com.ifes.sgpf.service;
+
+import org.springframework.stereotype.Service;
+
+
+@Service("analistaService")
+public class AnalistaService {
+
+	
+	
+	
+	
+}

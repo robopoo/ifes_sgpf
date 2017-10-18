@@ -1,0 +1,19 @@
+package com.ifes.sgpf.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ifes.sgpf.dao.AnalistaDAO;
+
+
+@Service("analistaService")
+public class AnalistaService {
+
+	
+
+	 @Autowired
+	 AnalistaDAO analistaDao;
+	
+	
+	
+}

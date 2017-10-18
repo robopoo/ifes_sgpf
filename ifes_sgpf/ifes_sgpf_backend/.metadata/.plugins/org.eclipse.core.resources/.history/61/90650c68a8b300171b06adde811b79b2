@@ -1,0 +1,5 @@
+package com.ifes.sgpf.model;
+
+public class Analista {
+
+}
