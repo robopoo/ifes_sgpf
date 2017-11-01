@@ -23,17 +23,17 @@ public class AnalistaController {
 
 	
 	
-	@RequestMapping(value = "/getAllAnalista", method = RequestMethod.GET, headers = "Accept=application/json")
+	@RequestMapping(value = "/analistas", method = RequestMethod.GET, headers = "Accept=application/json")
 	public String getAnalistas(Model model) {
 		
-		List listOfCountries = analistaService.getAllAnalistas();
+		List listOfAnalistas = analistaService.getAllAnalistas();
 		model.addAttribute("analista", new AnalistaService());
-		model.addAttribute("listOfAnalistas", listOfCountries);
+		model.addAttribute("listOfAnalistas", listOfAnalistas);
 		return "analistaDetails";
 	}
 
 	 
-	@RequestMapping(value = "/getAnalista/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
+	@RequestMapping(value = "/analista/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
 	public Analista getAnalistaById(@PathVariable int id) {
 		
 		return analistaService.getAnalista(id);
@@ -50,7 +50,7 @@ public class AnalistaController {
 			analistaService.updateAnalista(analista);
 		}
 		
-		return "redirect:/getAllAnalistas";
+		return "redirect:/analistas";
 	}
 
 		
@@ -68,7 +68,7 @@ public class AnalistaController {
 		
 		analistaService.deleteAnalista(id);
 		
-		 return "redirect:/getAllAnalistas";
+		 return "redirect:/analistas";
  
 	}
 	

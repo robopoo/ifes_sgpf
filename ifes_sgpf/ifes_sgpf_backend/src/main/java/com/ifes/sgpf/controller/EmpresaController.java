@@ -22,7 +22,7 @@ public class EmpresaController {
 	
 	
 	
-	@RequestMapping(value = "/getAllEmpresas", method = RequestMethod.GET, headers = "Accept=application/json")
+	@RequestMapping(value = "/empresas", method = RequestMethod.GET, headers = "Accept=application/json")
 	public String getEmpresas(Model model) {
 		
 		List listOfCountries = empresaService.getAllEmpresas();
@@ -31,7 +31,7 @@ public class EmpresaController {
 		return "empresaDetails";
 	}
  
-	@RequestMapping(value = "/getEmpresa/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
+	@RequestMapping(value = "/empresa/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
 	public Empresa getEmpresaById(@PathVariable int id) {
 		return empresaService.getEmpresa(id);
 	}
@@ -48,7 +48,7 @@ public class EmpresaController {
 			empresaService.updateEmpresa(empresa);
 		}
 		
-		return "redirect:/getAllEmpresas";
+		return "redirect:/empresas";
 	}
  
 	@RequestMapping(value = "/updateEmpresa/{id}", method = RequestMethod.GET, headers = "Accept=application/json")
@@ -65,7 +65,7 @@ public class EmpresaController {
 		
 		empresaService.deleteEmpresa(id);
 		
-		 return "redirect:/getAllEmpresas";
+		 return "redirect:/empresas";
  
 	}	
 	
