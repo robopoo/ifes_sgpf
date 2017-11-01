@@ -21,8 +21,7 @@ public class AnalistaController {
 	@Autowired
 	AnalistaService analistaService;
 
-	
-	
+
 	@RequestMapping(value = "/analistas", method = RequestMethod.GET, headers = "Accept=application/json")
 	public String getAnalistas(Model model) {
 		
